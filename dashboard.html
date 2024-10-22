@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Quality Prediction Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Water Quality Prediction Dashboard</h1>
+            <nav>
+                <ul>
+                    <li><a href="/input" class="nav-link">Input Data</a></li>
+                    <li><a href="/description" class="nav-link">Attribute Descriptions</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="metrics">
+            <h2>Model Performance Metrics</h2>
+            <div class="metric">
+                <h3>Random Forest Model</h3>
+                <p><strong>Accuracy:</strong> {{ rf_accuracy }}</p>
+                <p><strong>Log Loss:</strong> {{ rf_loss }}</p>
+                <h4>Confusion Matrix</h4>
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Predicted 0</th>
+                        <th>Predicted 1</th>
+                    </tr>
+                    <tr>
+                        <td>Actual 0</td>
+                        <td>{{ rf_conf_matrix[0][0] }}</td>
+                        <td>{{ rf_conf_matrix[0][1] }}</td>
+                    </tr>
+                    <tr>
+                        <td>Actual 1</td>
+                        <td>{{ rf_conf_matrix[1][0] }}</td>
+                        <td>{{ rf_conf_matrix[1][1] }}</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="metric">
+                <h3>Decision Tree Model</h3>
+                <p><strong>Accuracy:</strong> {{ dt_accuracy }}</p>
+                <p><strong>Log Loss:</strong> {{ dt_loss }}</p>
+                <h4>Confusion Matrix</h4>
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Predicted 0</th>
+                        <th>Predicted 1</th>
+                    </tr>
+                    <tr>
+                        <td>Actual 0</td>
+                        <td>{{ dt_conf_matrix[0][0] }}</td>
+                        <td>{{ dt_conf_matrix[0][1] }}</td>
+                    </tr>
+                    <tr>
+                        <td>Actual 1</td>
+                        <td>{{ dt_conf_matrix[1][0] }}</td>
+                        <td>{{ dt_conf_matrix[1][1] }}</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Water Quality Prediction. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
+
+

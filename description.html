@@ -1,0 +1,206 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Quality Attribute Descriptions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script>
+        // Script to handle the accordion toggle
+        document.addEventListener("DOMContentLoaded", function () {
+            var acc = document.getElementsByClassName("accordion-header");
+            for (var i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Water Quality Attribute Descriptions</h1>
+        </header>
+
+        <div class="accordion">
+            <!-- Aluminium -->
+            <div class="accordion-item">
+                <button class="accordion-header">Aluminium - Dangerous if greater than 2.8</button>
+                <div class="accordion-body">
+                    <p>Aluminium contamination in water can cause health issues like neurological disorders. Long-term exposure can lead to diseases such as Alzheimer’s, bone diseases, and damage to the nervous system.</p>
+                </div>
+            </div>
+
+            <!-- Ammonia -->
+            <div class="accordion-item">
+                <button class="accordion-header">Ammonia - Dangerous if greater than 32.5</button>
+                <div class="accordion-body">
+                    <p>Ammonia in water can cause unpleasant tastes and odors. High concentrations can be toxic to aquatic life, and its ingestion can result in harm to human health, causing respiratory and organ damage.</p>
+                </div>
+            </div>
+
+            <!-- Arsenic -->
+            <div class="accordion-item">
+                <button class="accordion-header">Arsenic - Dangerous if greater than 0.01</button>
+                <div class="accordion-body">
+                    <p>Arsenic is a carcinogen, and chronic exposure can lead to serious health issues such as skin cancer, kidney failure, and cardiovascular diseases. It’s highly toxic even at low levels.</p>
+                </div>
+            </div>
+
+            <!-- Barium -->
+            <div class="accordion-item">
+                <button class="accordion-header">Barium - Dangerous if greater than 2</button>
+                <div class="accordion-body">
+                    <p>High levels of barium in water can cause an increase in blood pressure, damage to the heart, and complications with the nervous system.</p>
+                </div>
+            </div>
+
+            <!-- Cadmium -->
+            <div class="accordion-item">
+                <button class="accordion-header">Cadmium - Dangerous if greater than 0.005</button>
+                <div class="accordion-body">
+                    <p>Cadmium is toxic and can accumulate in the body over time. Exposure can lead to kidney failure, liver damage, and bone weakening.</p>
+                </div>
+            </div>
+
+            <!-- Chloramine -->
+            <div class="accordion-item">
+                <button class="accordion-header">Chloramine - Dangerous if greater than 4</button>
+                <div class="accordion-body">
+                    <p>Chloramine is used for water disinfection, but high levels can cause irritation to skin, eyes, and respiratory systems. It can also harm aquatic ecosystems.</p>
+                </div>
+            </div>
+
+            <!-- Chromium -->
+            <div class="accordion-item">
+                <button class="accordion-header">Chromium - Dangerous if greater than 0.1</button>
+                <div class="accordion-body">
+                    <p>Chromium contamination can lead to skin irritations and ulcers. Long-term exposure to certain types of chromium may increase the risk of lung cancer.</p>
+                </div>
+            </div>
+
+            <!-- Copper -->
+            <div class="accordion-item">
+                <button class="accordion-header">Copper - Dangerous if greater than 1.3</button>
+                <div class="accordion-body">
+                    <p>High levels of copper in drinking water can cause nausea, vomiting, and stomach cramps. Long-term exposure can lead to liver and kidney damage.</p>
+                </div>
+            </div>
+
+            <!-- Fluoride -->
+            <div class="accordion-item">
+                <button class="accordion-header">Fluoride - Dangerous if greater than 1.5</button>
+                <div class="accordion-body">
+                    <p>Excessive fluoride consumption can lead to dental and skeletal fluorosis, causing pain and damage to bones and joints.</p>
+                </div>
+            </div>
+
+            <!-- Bacteria -->
+            <div class="accordion-item">
+                <button class="accordion-header">Bacteria - Dangerous if present (greater than 0)</button>
+                <div class="accordion-body">
+                    <p>Bacteria in drinking water can cause waterborne diseases such as cholera, dysentery, and typhoid. Safe drinking water should be bacteria-free.</p>
+                </div>
+            </div>
+
+            <!-- Viruses -->
+            <div class="accordion-item">
+                <button class="accordion-header">Viruses - Dangerous if present (greater than 0)</button>
+                <div class="accordion-body">
+                    <p>Viruses in water can lead to viral infections such as hepatitis, gastroenteritis, and other diseases. It is essential to ensure water is virus-free for safe consumption.</p>
+                </div>
+            </div>
+
+            <!-- Lead -->
+            <div class="accordion-item">
+                <button class="accordion-header">Lead - Dangerous if greater than 0.015</button>
+                <div class="accordion-body">
+                    <p>Lead is highly toxic and can cause severe health issues, including brain damage, developmental delays in children, and kidney and nervous system damage in adults.</p>
+                </div>
+            </div>
+
+            <!-- Nitrates -->
+            <div class="accordion-item">
+                <button class="accordion-header">Nitrates - Dangerous if greater than 10</button>
+                <div class="accordion-body">
+                    <p>High nitrate levels can cause blue baby syndrome in infants, reducing the ability of blood to carry oxygen, and can also lead to various digestive problems in adults.</p>
+                </div>
+            </div>
+
+            <!-- Nitrites -->
+            <div class="accordion-item">
+                <button class="accordion-header">Nitrites - Dangerous if greater than 1</button>
+                <div class="accordion-body">
+                    <p>Nitrites are toxic to infants and can interfere with the blood's ability to carry oxygen. Long-term exposure can increase the risk of cancer.</p>
+                </div>
+            </div>
+
+            <!-- Mercury -->
+            <div class="accordion-item">
+                <button class="accordion-header">Mercury - Dangerous if greater than 0.002</button>
+                <div class="accordion-body">
+                    <p>Mercury is a potent neurotoxin that can cause serious health problems, including neurological and developmental disorders, kidney damage, and digestive problems.</p>
+                </div>
+            </div>
+
+            <!-- Perchlorate -->
+            <div class="accordion-item">
+                <button class="accordion-header">Perchlorate - Dangerous if greater than 56</button>
+                <div class="accordion-body">
+                    <p>Perchlorate contamination can disrupt thyroid function, affecting metabolism, growth, and development, and is especially harmful to pregnant women and children.</p>
+                </div>
+            </div>
+
+            <!-- Radium -->
+            <div class="accordion-item">
+                <button class="accordion-header">Radium - Dangerous if greater than 5</button>
+                <div class="accordion-body">
+                    <p>Radium is a radioactive element that can increase the risk of bone cancer and other serious health problems when consumed over time.</p>
+                </div>
+            </div>
+
+            <!-- Selenium -->
+            <div class="accordion-item">
+                <button class="accordion-header">Selenium - Dangerous if greater than 0.5</button>
+                <div class="accordion-body">
+                    <p>Selenium is necessary for health in small amounts but can be toxic in higher concentrations, causing hair loss, nerve damage, and fatigue.</p>
+                </div>
+            </div>
+
+            <!-- Silver -->
+            <div class="accordion-item">
+                <button class="accordion-header">Silver - Dangerous if greater than 0.1</button>
+                <div class="accordion-body">
+                    <p>Exposure to high levels of silver can cause skin discoloration (argyria) and affect kidney and liver function.</p>
+                </div>
+            </div>
+
+            <!-- Uranium -->
+            <div class="accordion-item">
+                <button class="accordion-header">Uranium - Dangerous if greater than 0.3</button>
+                <div class="accordion-body">
+                    <p>Uranium in drinking water can cause kidney damage, and long-term exposure can increase the risk of cancer.</p>
+                </div>
+            </div>
+
+            <!-- Is Safe -->
+            <div class="accordion-item">
+                <button class="accordion-header">Is Safe - Class attribute (0: Not safe, 1: Safe)</button>
+                <div class="accordion-body">
+                    <p>The "is_safe" attribute indicates whether the water is safe to drink (1) or not safe to drink (0) based on the overall evaluation of its attributes.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <a href="/" class="btn">Go back to the dashboard</a>
+        </footer>
+    </div>
+</body>
+</html>
