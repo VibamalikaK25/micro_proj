@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Quality Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Water Safety Prediction</h1>
+        </header>
+
+        <section>
+            <form method="POST" action="/predict">
+                <label for="aluminium">Aluminium:</label>
+                <input type="number" step="any" name="aluminium" required>
+
+                <label for="ammonia">Ammonia:</label>
+                <input type="number" step="any" name="ammonia" required>
+
+                <label for="arsenic">Arsenic:</label>
+                <input type="number" step="any" name="arsenic" required>
+
+                <label for="barium">Barium:</label>
+                <input type="number" step="any" name="barium" required>
+
+                <label for="cadmium">Cadmium:</label>
+                <input type="number" step="any" name="cadmium" required>
+
+                <label for="chloramine">Chloramine:</label>
+                <input type="number" step="any" name="chloramine" required>
+
+                <label for="chromium">Chromium:</label>
+                <input type="number" step="any" name="chromium" required>
+
+                <label for="copper">Copper:</label>
+                <input type="number" step="any" name="copper" required>
+
+                <label for="flouride">Flouride:</label>
+                <input type="number" step="any" name="flouride" required>
+
+                <label for="bacteria">Bacteria:</label>
+                <input type="number" step="any" name="bacteria" required>
+
+                <label for="viruses">Viruses:</label>
+                <input type="number" step="any" name="viruses" required>
+
+                <label for="lead">Lead:</label>
+                <input type="number" step="any" name="lead" required>
+
+                <label for="nitrates">Nitrates:</label>
+                <input type="number" step="any" name="nitrates" required>
+
+                <label for="nitrites">Nitrites:</label>
+                <input type="number" step="any" name="nitrites" required>
+
+                <label for="mercury">Mercury:</label>
+                <input type="number" step="any" name="mercury" required>
+
+                <label for="perchlorate">Perchlorate:</label>
+                <input type="number" step="any" name="perchlorate" required>
+
+                <label for="radium">Radium:</label>
+                <input type="number" step="any" name="radium" required>
+
+                <label for="selenium">Selenium:</label>
+                <input type="number" step="any" name="selenium" required>
+
+                <label for="silver">Silver:</label>
+                <input type="number" step="any" name="silver" required>
+
+                <label for="uranium">Uranium:</label>
+                <input type="number" step="any" name="uranium" required>
+
+                <input type="submit" value="Predict" class="btn">
+            </form>
+
+            <a href="/" class="btn">Back to Dashboard</a>
+        </section>
+    </div>
+</body>
+</html>
+
